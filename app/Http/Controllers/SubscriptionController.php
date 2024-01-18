@@ -26,20 +26,7 @@ class SubscriptionController extends Controller
         }
     }
 
-    private function processPayment(User $user)
-    {
-        // PayCellMockService kullanarak ödeme işlemini simüle et
-        $payCellService = new PayCellMockService();
-        $paymentResult = $payCellService->processPayment($user->email, $paymentAmount);
-
-        // Ödeme başarılıysa üyelik süresini güncelle
-        if ($paymentResult['success']) {
-            $this->updateMembership($user);
-        } else {
-            // Ödeme başarısızsa gerekirse kullanıcıya bilgi ver veya logla
-            // Log::error('Ödeme başarısız: ' . $paymentResult['error']);
-        }
-    }
+    
 
 
 }
