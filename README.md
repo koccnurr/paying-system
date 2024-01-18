@@ -21,6 +21,5 @@ Bu projede, 30 günlük üyelik süresi sonunda otomatik olarak ödeme alınmas�
 
 -  `php artisan migrate
 `
--   php artisan serve
-
+-   `php artisan serve`
 
